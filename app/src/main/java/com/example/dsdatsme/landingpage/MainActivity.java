@@ -29,7 +29,9 @@ static final String URL = "https://play.google.com/store/apps/details?id=com.gee
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(URL));
+                startActivity(i);
 
             }
         });
